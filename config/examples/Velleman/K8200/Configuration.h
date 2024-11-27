@@ -56,9 +56,6 @@
 // K8204 Z axis upgrade rod and coupler -> TODO
 //#define K8200_K8204
 
-// K8203 direct drive extruder -> TODO
-//#define K8200_K8203
-
 //
 // Full Graphic Controller
 //  e.g., https://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
@@ -2852,6 +2849,8 @@
 #define INDIVIDUAL_AXIS_HOMING_MENU
 //#define INDIVIDUAL_AXIS_HOMING_SUBMENU
 
+#endif // K8200_VM8201 || REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+
 //
 // SPEAKER/BUZZER
 //
@@ -3194,8 +3193,6 @@
 // https://github.com/android444/Silvergate
 //
 //#define SILVER_GATE_GLCD_CONTROLLER
-
-#endif // K8200_VM8201 || REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // eMotion Tech LCD with SD

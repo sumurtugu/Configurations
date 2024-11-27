@@ -56,12 +56,10 @@
 // Full Graphic Controller
 //  https://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //  or https://www.open-electronics.org/full-graphic-smart-controller-display-for-3drag-3dprinter/
-#define FULLGRAPHIC_CONTROLLER_LCD_SD
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 // K8204 Z axis upgrade rod and coupler
 #define K8200_K8204
-// K8203 direct drive extruder -> TODO
-//#define K8200_K8203
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -2726,7 +2724,7 @@
 // @section interface
 
 // K8200: for Display VM8201 with SD slot
-#if ANY(K8200_VM8201, FULLGRAPHIC_CONTROLLER_LCD_SD)
+#if ANY(K8200_VM8201, REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
 
 /**
  * LCD LANGUAGE
@@ -2787,13 +2785,13 @@
 // produce one step. Should be increased for high-resolution encoders.
 //
 #define ENCODER_PULSES_PER_STEP 4 // K8200_VM8201: four steps per encoder step
-// FULLGRAPHIC_CONTROLLER_LCD_SD: four steps per menu item
+
 //
 // Use this option to override the number of step signals required to
 // move between next/prev menu items.
 //
 #define ENCODER_STEPS_PER_MENU_ITEM 1 // K8200_VM8201: One step per menu item
-// FULLGRAPHIC_CONTROLLER_LCD_SD: One step per menu item
+
 
 /**
  * Encoder Direction Options
@@ -2810,9 +2808,10 @@
 //
 //  Set this option if CLOCKWISE causes values to DECREASE
 //
-#if ENABLED(FULLGRAPHIC_CONTROLLER_LCD_SD)
+#if ENABLED(REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
   #define REVERSE_ENCODER_DIRECTION
 #endif
+
 //
 // This option reverses the encoder direction for navigating LCD menus.
 //
@@ -2822,6 +2821,7 @@
 #if ENABLED(K8200_VM8201)
   #define REVERSE_MENU_DIRECTION // K8200: for Display VM8201 encoder on right side
 #endif
+
 //
 // This option reverses the encoder direction for Select Screen.
 //
@@ -2847,6 +2847,8 @@
 //
 #define INDIVIDUAL_AXIS_HOMING_MENU
 //#define INDIVIDUAL_AXIS_HOMING_SUBMENU
+
+#endif // K8200_VM8201, REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // SPEAKER/BUZZER
@@ -3049,11 +3051,8 @@
 // RepRapDiscount FULL GRAPHIC Smart Controller
 // https://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
+//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
-
-#if ENABLED(FULLGRAPHIC_CONTROLLER_LCD_SD)
-  #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
-#endif
 //
 // K.3D Full Graphic Smart Controller
 //
@@ -3192,8 +3191,6 @@
 // https://github.com/android444/Silvergate
 //
 //#define SILVER_GATE_GLCD_CONTROLLER
-
-#endif // K8200_VM8201, FULLGRAPHIC_CONTROLLER_LCD_SD
 
 //
 // eMotion Tech LCD with SD

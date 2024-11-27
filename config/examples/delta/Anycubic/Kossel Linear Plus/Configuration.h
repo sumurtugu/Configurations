@@ -26,16 +26,17 @@
 /**
  * Choose your version:
  */
-// normal size or plus?
+
+// Normal or Plus size?
 #define ANYCUBIC_KOSSEL_PLUS
 
 // Anycubic Probe version 1 or 2 see README.md; 0 for no probe
 #define ANYCUBIC_PROBE_VERSION 2
 
 // Heated Bed:
-// 0 ... no heated bed
-// 1 ... aluminium heated bed with "BuildTak-like" sticker
-// 2 ... ultrabase heated bed
+// 0 ... No heated bed
+// 1 ... Aluminium heated bed with "BuildTak-like" sticker
+// 2 ... Ultrabase heated bed
 #define ANYCUBIC_KOSSEL_ENABLE_BED 2
 
 /**
